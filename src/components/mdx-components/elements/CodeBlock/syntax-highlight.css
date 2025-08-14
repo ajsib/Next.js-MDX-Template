@@ -1,0 +1,72 @@
+:root {
+    --syntax-fg: #3c4250;
+    --syntax-bg: transparent;
+    --syntax-comment: #789262;
+    --syntax-prolog: #789262;
+    --syntax-doctype: #789262;
+    --syntax-cdata: #789262;
+    --syntax-punctuation: #3c4250;
+    --syntax-property: #3971b2;
+    --syntax-tag: #376eb7;
+    --syntax-constant: #318a87;
+    --syntax-symbol: #7e986c;
+    --syntax-deleted: #b1584b;
+    --syntax-boolean: #376eb7;
+    --syntax-number: #7e986c;
+    --syntax-selector: #b49d45;
+    --syntax-attr-name: #3971b2;
+    --syntax-string: #b1584b;
+    --syntax-char: #b1584b;
+    --syntax-builtin: #b49d45;
+    --syntax-inserted: #7e986c;
+    --syntax-operator: #3c4250;
+    --syntax-entity: #3c4250;
+    --syntax-url: #b49d45;
+    --syntax-atrule: #7863a8;
+    --syntax-attr-value: #b1584b;
+    --syntax-function: #b49d45;
+    --syntax-class-name: #318a87;
+    --syntax-keyword: #376eb7;
+    --syntax-regex: #bc4c4c;
+    --syntax-important: #376eb7;
+    --syntax-variable: #3971b2;
+    --syntax-plain: #3c4250;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --syntax-fg: #d4d4d4;
+      --syntax-bg: #1e1e1e;
+      --syntax-comment: #6a9955;
+      --syntax-prolog: #6a9955;
+      --syntax-doctype: #6a9955;
+      --syntax-cdata: #6a9955;
+      --syntax-punctuation: #d4d4d4;
+      --syntax-property: #9cdcfe;
+      --syntax-tag: #569cd6;
+      --syntax-constant: #4ec9b0;
+      --syntax-symbol: #b5cea8;
+      --syntax-deleted: #ce9178;
+      --syntax-boolean: #569cd6;
+      --syntax-number: #b5cea8;
+      --syntax-selector: #d7ba7d;
+      --syntax-attr-name: #9cdcfe;
+      --syntax-string: #ce9178;
+      --syntax-char: #ce9178;
+      --syntax-builtin: #dcdcaa;
+      --syntax-inserted: #b5cea8;
+      --syntax-operator: #d4d4d4;
+      --syntax-entity: #d4d4d4;
+      --syntax-url: #d7ba7d;
+      --syntax-atrule: #c586c0;
+      --syntax-attr-value: #ce9178;
+      --syntax-function: #dcdcaa;
+      --syntax-class-name: #4ec9b0;
+      --syntax-keyword: #569cd6;
+      --syntax-regex: #d16969;
+      --syntax-important: #569cd6;
+      --syntax-variable: #9cdcfe;
+      --syntax-plain: #d4d4d4;
+    }
+  }
+  

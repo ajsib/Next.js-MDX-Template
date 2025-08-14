@@ -1,0 +1,9 @@
+/* styles/globals.css */
+
+
+@import './base/_fonts.css';
+@import './base/_design-system.css';
+@import './base/_reset.css';
+@import './base/_typography.css';
+
+

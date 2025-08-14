@@ -1,0 +1,259 @@
+/* styles/base/_colors.css */
+
+/* Universal Color System for Maximum Customizability and Design Hierarchy */
+/* Uses your palette, extensive vars for all major use cases, dark mode support, consistent naming */
+
+:root {
+  /* Brand & Primary Palette */
+  --brand-100: #F9FAF7;
+  --brand-200: #F5A300;
+  --brand-300: #7C8463;
+  --brand-400: #5C6066;
+  --brand-500: #343A40;
+  --brand-600: #2D3C33;
+
+  /* Core Neutrals */
+  --neutral-000: #ffffff;
+  --neutral-100: #F9FAF7;
+  --neutral-200: #E9ECEF;
+  --neutral-300: #DEE2E6;
+  --neutral-400: #CED4DA;
+  --neutral-500: #ADB5BD;
+  --neutral-600: #868E96;
+  --neutral-700: #495057;
+  --neutral-800: #343A40;
+  --neutral-900: #2D3C33;
+
+  /* Background System - For page backgrounds and major containers */
+  --background-0: var(--neutral-000);     /* Base white background */
+  --background-50: #FCFCFC;               /* Subtle off-white */
+  --background-100: var(--neutral-100);   /* Main page background */
+  --background-200: #F2F3F1;              /* Secondary container */
+  --background-300: var(--neutral-200);   /* Tertiary container */
+  --background-400: var(--neutral-300);   /* Quaternary container */
+  
+  /* Surface System - For cards, interactive elements, and components */
+  --surface-0: var(--neutral-000);        /* Base surface */
+  --surface-50: #FAFBF8;                  /* Subtle raised surface */
+  --surface-100: var(--neutral-100);      /* Card default */
+  --surface-200: var(--neutral-200);      /* Elevated cards */
+  --surface-300: var(--neutral-300);      /* More elevated elements */
+  --surface-400: var(--neutral-400);      /* Highest elevation */
+  
+  /* Interactive Surfaces - For state changes */
+  --surface-hover: rgba(0, 0, 0, 0.03);   /* Hover state overlay */
+  --surface-active: rgba(0, 0, 0, 0.06);  /* Active state overlay */
+  --surface-selected: rgba(245, 163, 0, 0.08); /* Selected state with brand color */
+  --surface-disabled: rgba(0, 0, 0, 0.04); /* Disabled state */
+  
+  /* Accent Surfaces */
+  --surface-brand-50: #FEF9E7;            /* Very subtle brand surface */
+  --surface-brand-100: #FFF4D1;           /* Light brand surface */
+  --surface-brand-200: #FFE9A3;           /* Medium brand surface */
+  
+  /* Text Hierarchy System */
+  /* Primary Text - For most UI text */
+  --text-900: #202825;                    /* Highest contrast text - headings */
+  --text-800: var(--brand-600);           /* High emphasis text - important content */
+  --text-700: #3A413D;                    /* Medium-high emphasis - subheadings */
+  --text-600: var(--brand-400);           /* Default body text */
+  --text-500: #5C6066;                    /* Medium emphasis text */
+  --text-400: #6C757D;                    /* Medium-low emphasis text */
+  --text-300: var(--neutral-600);         /* Low emphasis text - supporting info */
+  --text-200: #A4A9AD;                    /* Very low emphasis - tertiary info */
+  --text-100: #C2C7CA;                    /* Minimal emphasis - placeholders */
+  --text-0: var(--neutral-000);           /* White text - for dark backgrounds */
+  
+  /* Text Context Variants */
+  --text-default: var(--text-800);        /* Default text throughout the app */
+  --text-subtle: var(--text-500);         /* For less important text */
+  --text-muted: var(--text-300);          /* For supporting text elements */
+  --text-placeholder: var(--text-200);    /* For input placeholders */
+  --text-inverse: var(--text-0);          /* For text on dark backgrounds */
+  --text-disabled: var(--text-200);       /* For disabled text elements */
+  
+  /* Brand Text Variants */
+  --text-brand: var(--brand-200);         /* Primary brand color text */
+  --text-brand-contrast: var(--brand-600); /* Darker brand color for better contrast */
+  --text-on-brand: var(--neutral-000);    /* For text on brand-colored backgrounds */
+  
+  /* Interactive Text States */
+  --text-interactive: var(--brand-200);   /* For interactive elements */
+  --text-interactive-hover: #e29300;      /* Hover state for interactive text */
+  --text-interactive-active: #b87800;     /* Active state for interactive text */
+
+  /* Accent / Highlight */
+  --accent-main: var(--brand-200);
+  --accent-hover: #e29300;
+  --accent-active: #b87800;
+
+  /* Semantic / Status */
+  --success-main: #1B7C38;
+  --success-bg: #d3e7d9;
+  --warning-main: #F5A300;
+  --warning-bg: #fff4d1;
+  --error-main: #C1121F;
+  --error-bg: #ffd6d6;
+  --info-main: #005ca3;
+  --info-bg: #e0f0ff;
+  
+  /* Semantic Text */
+  --text-success: #177732;                /* Success text */
+  --text-warning: #9F6700;                /* Warning text */
+  --text-error: #B91C1C;                  /* Error text */
+  --text-info: #0369A1;                   /* Info text */
+
+  /* Interactive / States */
+  --interactive-default: var(--brand-200);
+  --interactive-hover: var(--brand-300);
+  --interactive-active: var(--brand-400);
+  --interactive-focus: var(--accent-main);
+
+  /* Border */
+  --border-light: #E9ECEF;
+  --border-medium: #ADB5BD;
+  --border-dark: #343A40;
+  --border-focus: var(--accent-main);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 8px rgba(0,0,0,0.10);
+  --shadow-lg: 0 8px 16px rgba(0,0,0,0.18);
+
+  /* Misc / Utility */
+  --focus-ring: 0 0 0 3px rgba(245, 163, 0, 0.35); /* yellow highlight */
+  --overlay-bg: rgba(44, 44, 44, 0.65);
+
+  /* Gradients */
+  --gradient-brand: linear-gradient(90deg, var(--brand-200), var(--brand-300));
+  --gradient-accent: linear-gradient(90deg, var(--accent-main), var(--accent-hover));
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Brand & Primary Palette (dark adjusted) */
+    --brand-100: #252c28;
+    --brand-200: #e8b544;
+    --brand-300: #a1a687;
+    --brand-400: #969b93;
+    --brand-500: #878c94;
+    --brand-600: #F9FAF7;
+
+    /* Core Neutrals */
+    --neutral-000: #161a19;
+    --neutral-100: #232a26;
+    --neutral-200: #2D3C33;
+    --neutral-300: #343A40;
+    --neutral-400: #444A51;
+    --neutral-500: #5C6066;
+    --neutral-600: #7C8463;
+    --neutral-700: #b3b8ae;
+    --neutral-800: #e0e2df;
+    --neutral-900: #F9FAF7;
+
+    /* Background System - For page backgrounds and major containers */
+    --background-0: #121615;               /* Darkest background */
+    --background-50: #161a19;              /* Slightly lighter */
+    --background-100: var(--neutral-100);  /* Main page background */
+    --background-200: #2A312C;             /* Secondary container */
+    --background-300: var(--neutral-200);  /* Tertiary container */
+    --background-400: var(--neutral-300);  /* Quaternary container */
+    
+    /* Surface System - For cards, interactive elements, and components */
+    --surface-0: #1A1E1D;                  /* Base surface */
+    --surface-50: #1F2421;                 /* Subtle raised surface */
+    --surface-100: var(--neutral-100);     /* Card default */
+    --surface-200: var(--neutral-200);     /* Elevated cards */
+    --surface-300: var(--neutral-300);     /* More elevated elements */
+    --surface-400: var(--neutral-400);     /* Highest elevation */
+    
+    /* Interactive Surfaces - For state changes */
+    --surface-hover: rgba(255, 255, 255, 0.05);   /* Hover state overlay */
+    --surface-active: rgba(255, 255, 255, 0.08);  /* Active state overlay */
+    --surface-selected: rgba(232, 181, 68, 0.15); /* Selected state with brand color */
+    --surface-disabled: rgba(255, 255, 255, 0.03); /* Disabled state */
+    
+    /* Accent Surfaces */
+    --surface-brand-50: #332D1A;           /* Very subtle brand surface */
+    --surface-brand-100: #3D3420;          /* Light brand surface */
+    --surface-brand-200: #4D3F20;          /* Medium brand surface */
+
+    /* Text Hierarchy System */
+    /* Primary Text - For most UI text (inverted for dark mode) */
+    --text-900: #F9FAF7;                   /* Highest contrast text - headings */
+    --text-800: #E8EAEC;                   /* High emphasis text - important content */
+    --text-700: #D4D8DC;                   /* Medium-high emphasis - subheadings */
+    --text-600: #C1C6CC;                   /* Default body text */
+    --text-500: #AFB5BD;                   /* Medium emphasis text */
+    --text-400: #9CA4AC;                   /* Medium-low emphasis text */
+    --text-300: #878E96;                   /* Low emphasis text - supporting info */
+    --text-200: #6C757D;                   /* Very low emphasis - tertiary info */
+    --text-100: #50575E;                   /* Minimal emphasis - placeholders */
+    --text-0: #161a19;                     /* Darkest text - for light backgrounds */
+    
+    /* Text Context Variants */
+    --text-default: var(--text-800);       /* Default text throughout the app */
+    --text-subtle: var(--text-500);        /* For less important text */
+    --text-muted: var(--text-300);         /* For supporting text elements */
+    --text-placeholder: var(--text-200);   /* For input placeholders */
+    --text-inverse: var(--text-0);         /* For text on light backgrounds */
+    --text-disabled: var(--text-200);      /* For disabled text elements */
+    
+    /* Brand Text Variants */
+    --text-brand: var(--brand-200);        /* Primary brand color text */
+    --text-brand-contrast: #f5c464;        /* Lighter brand color for better contrast in dark mode */
+    --text-on-brand: var(--neutral-900);   /* For text on brand-colored backgrounds */
+    
+    /* Interactive Text States */
+    --text-interactive: var(--brand-200);  /* For interactive elements */
+    --text-interactive-hover: #ffd364;     /* Hover state for interactive text */
+    --text-interactive-active: #e5b859;    /* Active state for interactive text */
+
+    /* Accent / Highlight */
+    --accent-main: var(--brand-200);
+    --accent-hover: #ffd364;
+    --accent-active: #b87800;
+
+    /* Semantic / Status */
+    --success-main: #57e389;
+    --success-bg: #173b27;
+    --warning-main: #f5c573;
+    --warning-bg: #3d2f08;
+    --error-main: #ff6565;
+    --error-bg: #412021;
+    --info-main: #69b8f4;
+    --info-bg: #143a53;
+    
+    /* Semantic Text */
+    --text-success: #4ADE80;               /* Success text for dark mode */
+    --text-warning: #FCD34D;               /* Warning text for dark mode */
+    --text-error: #FB7185;                 /* Error text for dark mode */
+    --text-info: #60A5FA;                  /* Info text for dark mode */
+
+    /* Interactive / States */
+    --interactive-default: var(--brand-200);
+    --interactive-hover: var(--brand-300);
+    --interactive-active: var(--brand-400);
+    --interactive-focus: var(--accent-main);
+
+    /* Border */
+    --border-light: #232a26;
+    --border-medium: #5C6066;
+    --border-dark: #F9FAF7;
+    --border-focus: var(--accent-main);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.14);
+    --shadow-md: 0 4px 8px rgba(0,0,0,0.18);
+    --shadow-lg: 0 8px 16px rgba(0,0,0,0.25);
+
+    /* Misc / Utility */
+    --focus-ring: 0 0 0 3px rgba(245, 163, 0, 0.45); /* yellow highlight */
+    --overlay-bg: rgba(10, 10, 10, 0.75);
+
+    /* Gradients */
+    --gradient-brand: linear-gradient(90deg, var(--brand-200), var(--brand-300));
+    --gradient-accent: linear-gradient(90deg, var(--accent-main), var(--accent-hover));
+  }
+}

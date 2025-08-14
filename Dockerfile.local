@@ -1,0 +1,26 @@
+# Frontend Dockerfile
+FROM node:18-alpine
+
+# Set working directory
+WORKDIR /app
+
+# Install pnpm globally
+RUN npm install -g pnpm
+
+# Set environment variables
+ENV NODE_ENV=development
+
+# Copy package.json and pnpm-lock.yaml for dependency installation
+COPY package.json pnpm-lock.yaml ./
+
+# Install dependencies
+RUN pnpm install
+
+# Copy the rest of the app
+COPY . .
+
+# Expose the port the app runs on
+EXPOSE 4287
+
+# Command to run the frontend (add this if necessary)
+CMD ["pnpm", "run", "dev"]

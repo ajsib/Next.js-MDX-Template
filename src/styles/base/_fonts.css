@@ -1,0 +1,652 @@
+/* _fonts.css */
+
+/* =========================================
+   FONT ACCENT - JetBrains Mono
+   ========================================= */
+
+/* JetBrains Mono - Regular */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/font-accent/JetBrainsMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono - Italic */
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/font-accent/JetBrainsMono-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono - Thin */
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/font-accent/JetBrainsMono-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono - Thin Italic */
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/font-accent/JetBrainsMono-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono - ExtraLight */
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/font-accent/JetBrainsMono-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono - ExtraLight Italic */
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/font-accent/JetBrainsMono-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono - Light */
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/font-accent/JetBrainsMono-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono - Light Italic */
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/font-accent/JetBrainsMono-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono - Medium */
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/font-accent/JetBrainsMono-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono - Medium Italic */
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/font-accent/JetBrainsMono-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono - SemiBold */
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/font-accent/JetBrainsMono-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono - SemiBold Italic */
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/font-accent/JetBrainsMono-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono - Bold */
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/font-accent/JetBrainsMono-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono - Bold Italic */
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/font-accent/JetBrainsMono-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono - ExtraBold */
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/font-accent/JetBrainsMono-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono - ExtraBold Italic */
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/font-accent/JetBrainsMono-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono NL (No Ligatures) - Regular */
+  @font-face {
+    font-family: 'JetBrains Mono NL';
+    src: url('/fonts/font-accent/JetBrainsMonoNL-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono NL - Italic */
+  @font-face {
+    font-family: 'JetBrains Mono NL';
+    src: url('/fonts/font-accent/JetBrainsMonoNL-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono NL - Thin */
+  @font-face {
+    font-family: 'JetBrains Mono NL';
+    src: url('/fonts/font-accent/JetBrainsMonoNL-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono NL - Thin Italic */
+  @font-face {
+    font-family: 'JetBrains Mono NL';
+    src: url('/fonts/font-accent/JetBrainsMonoNL-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono NL - ExtraLight */
+  @font-face {
+    font-family: 'JetBrains Mono NL';
+    src: url('/fonts/font-accent/JetBrainsMonoNL-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono NL - ExtraLight Italic */
+  @font-face {
+    font-family: 'JetBrains Mono NL';
+    src: url('/fonts/font-accent/JetBrainsMonoNL-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono NL - Light */
+  @font-face {
+    font-family: 'JetBrains Mono NL';
+    src: url('/fonts/font-accent/JetBrainsMonoNL-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono NL - Light Italic */
+  @font-face {
+    font-family: 'JetBrains Mono NL';
+    src: url('/fonts/font-accent/JetBrainsMonoNL-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono NL - Medium */
+  @font-face {
+    font-family: 'JetBrains Mono NL';
+    src: url('/fonts/font-accent/JetBrainsMonoNL-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono NL - Medium Italic */
+  @font-face {
+    font-family: 'JetBrains Mono NL';
+    src: url('/fonts/font-accent/JetBrainsMonoNL-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono NL - SemiBold */
+  @font-face {
+    font-family: 'JetBrains Mono NL';
+    src: url('/fonts/font-accent/JetBrainsMonoNL-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono NL - SemiBold Italic */
+  @font-face {
+    font-family: 'JetBrains Mono NL';
+    src: url('/fonts/font-accent/JetBrainsMonoNL-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono NL - Bold */
+  @font-face {
+    font-family: 'JetBrains Mono NL';
+    src: url('/fonts/font-accent/JetBrainsMonoNL-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono NL - Bold Italic */
+  @font-face {
+    font-family: 'JetBrains Mono NL';
+    src: url('/fonts/font-accent/JetBrainsMonoNL-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono NL - ExtraBold */
+  @font-face {
+    font-family: 'JetBrains Mono NL';
+    src: url('/fonts/font-accent/JetBrainsMonoNL-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* JetBrains Mono NL - ExtraBold Italic */
+  @font-face {
+    font-family: 'JetBrains Mono NL';
+    src: url('/fonts/font-accent/JetBrainsMonoNL-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* =========================================
+     FONT BODY - Inter
+     ========================================= */
+  
+  /* Inter - Regular */
+  @font-face {
+    font-family: 'Inter';
+    src: url('/fonts/font-body/Inter-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Inter - Italic */
+  @font-face {
+    font-family: 'Inter';
+    src: url('/fonts/font-body/Inter-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* Inter - Thin */
+  @font-face {
+    font-family: 'Inter';
+    src: url('/fonts/font-body/Inter-Thin-BETA.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Inter - Thin Italic */
+  @font-face {
+    font-family: 'Inter';
+    src: url('/fonts/font-body/Inter-ThinItalic-BETA.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* Inter - ExtraLight */
+  @font-face {
+    font-family: 'Inter';
+    src: url('/fonts/font-body/Inter-ExtraLight-BETA.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Inter - ExtraLight Italic */
+  @font-face {
+    font-family: 'Inter';
+    src: url('/fonts/font-body/Inter-ExtraLightItalic-BETA.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* Inter - Light */
+  @font-face {
+    font-family: 'Inter';
+    src: url('/fonts/font-body/Inter-Light-BETA.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Inter - Light Italic */
+  @font-face {
+    font-family: 'Inter';
+    src: url('/fonts/font-body/Inter-LightItalic-BETA.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* Inter - Medium */
+  @font-face {
+    font-family: 'Inter';
+    src: url('/fonts/font-body/Inter-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Inter - Medium Italic */
+  @font-face {
+    font-family: 'Inter';
+    src: url('/fonts/font-body/Inter-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* Inter - SemiBold */
+  @font-face {
+    font-family: 'Inter';
+    src: url('/fonts/font-body/Inter-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Inter - SemiBold Italic */
+  @font-face {
+    font-family: 'Inter';
+    src: url('/fonts/font-body/Inter-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* Inter - Bold */
+  @font-face {
+    font-family: 'Inter';
+    src: url('/fonts/font-body/Inter-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Inter - Bold Italic */
+  @font-face {
+    font-family: 'Inter';
+    src: url('/fonts/font-body/Inter-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* Inter - ExtraBold */
+  @font-face {
+    font-family: 'Inter';
+    src: url('/fonts/font-body/Inter-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Inter - ExtraBold Italic */
+  @font-face {
+    font-family: 'Inter';
+    src: url('/fonts/font-body/Inter-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* Inter - Black */
+  @font-face {
+    font-family: 'Inter';
+    src: url('/fonts/font-body/Inter-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Inter - Black Italic */
+  @font-face {
+    font-family: 'Inter';
+    src: url('/fonts/font-body/Inter-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* =========================================
+     FONT BRAND - Eurostile
+     ========================================= */
+  
+  /* Eurostile - Regular */
+  @font-face {
+    font-family: 'Eurostile';
+    src: url('/fonts/font-brand/Eurostile.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Eurostile - Regular Oblique */
+  @font-face {
+    font-family: 'Eurostile';
+    src: url('/fonts/font-brand/Eurostile_Regular_Oblique.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* Eurostile - Medium */
+  @font-face {
+    font-family: 'Eurostile';
+    src: url('/fonts/font-brand/Eurostile_Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Eurostile - Medium Italic */
+  @font-face {
+    font-family: 'Eurostile';
+    src: url('/fonts/font-brand/Eurostile_Medium_Italic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* Eurostile - Bold */
+  @font-face {
+    font-family: 'Eurostile';
+    src: url('/fonts/font-brand/Eurostile_Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Eurostile - Bold Oblique */
+  @font-face {
+    font-family: 'Eurostile';
+    src: url('/fonts/font-brand/Eurostile_Bold_Oblique.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* Eurostile - Heavy */
+  @font-face {
+    font-family: 'Eurostile';
+    src: url('/fonts/font-brand/Eurostile_Heavy.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Eurostile - Heavy Italic */
+  @font-face {
+    font-family: 'Eurostile';
+    src: url('/fonts/font-brand/Eurostile_Heavy_Italic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* Eurostile - Black */
+  @font-face {
+    font-family: 'Eurostile';
+    src: url('/fonts/font-brand/Eurostile_Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Eurostile - Black Italic */
+  @font-face {
+    font-family: 'Eurostile';
+    src: url('/fonts/font-brand/Eurostile_Black_Italic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* Eurostile - Condensed */
+  @font-face {
+    font-family: 'Eurostile Condensed';
+    src: url('/fonts/font-brand/Eurostile_Cond.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Eurostile - Condensed Italic */
+  @font-face {
+    font-family: 'Eurostile Condensed';
+    src: url('/fonts/font-brand/Eurostile_Cond_Regular_Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* Eurostile - Condensed Heavy */
+  @font-face {
+    font-family: 'Eurostile Condensed';
+    src: url('/fonts/font-brand/Eurostile_Cond_Heavy.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Eurostile - Condensed Heavy Italic */
+  @font-face {
+    font-family: 'Eurostile Condensed';
+    src: url('/fonts/font-brand/Eurostile_Cond_Heavy_Italic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* Eurostile - Extended */
+  @font-face {
+    font-family: 'Eurostile Extended';
+    src: url('/fonts/font-brand/Eurostile_Extd.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Eurostile - Extended Italic */
+  @font-face {
+    font-family: 'Eurostile Extended';
+    src: url('/fonts/font-brand/Eurostile_Extd_Regular_Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* Eurostile - Extended Medium */
+  @font-face {
+    font-family: 'Eurostile Extended';
+    src: url('/fonts/font-brand/Eurostile_Extd_Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Eurostile - Extended Black */
+  @font-face {
+    font-family: 'Eurostile Extended';
+    src: url('/fonts/font-brand/Eurostile_Extd_Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Eurostile - Extended Black Italic */
+  @font-face {
+    font-family: 'Eurostile Extended';
+    src: url('/fonts/font-brand/Eurostile_Extd_Black_Italic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* =========================================
+     CSS Variables
+     ========================================= */
+  
+  :root {
+    /* Primary font families */
+    --font-brand: 'Eurostile', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-accent: 'JetBrains Mono', monospace;
+    --font-mono: 'JetBrains Mono', monospace;
+    
+    /* Alternate font family variants */
+    --font-brand-condensed: 'Eurostile Condensed', sans-serif;
+    --font-brand-extended: 'Eurostile Extended', sans-serif;
+    --font-accent-nl: 'JetBrains Mono NL', monospace; /* No Ligatures variant */
+  }
+  

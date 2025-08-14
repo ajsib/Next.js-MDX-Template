@@ -1,0 +1,31 @@
+/* ./src/components/mdx-components/styles/mdx-base.css */
+
+/* Base MDX container styles - minimal spacing */
+/* .mdx-content { */
+    /* Optional container to apply consistent spacing between MDX elements */
+    /* By default, no margins are applied to individual elements */
+  /* } */
+  
+  /* Spacing between MDX elements - can be applied selectively */
+  .mdx-content > * + * {
+    margin-top: 1rem; /* Minimal spacing between elements */
+  }
+  
+  /* Content-specific spacing that can be enabled when needed */
+  .mdx-content--spaced h1 { margin-top: 2.5rem; margin-bottom: 1.5rem; }
+  .mdx-content--spaced h2 { margin-top: 2rem; margin-bottom: 1rem; }
+  .mdx-content--spaced h3 { margin-top: 1.75rem; margin-bottom: 0.75rem; }
+  .mdx-content--spaced h4,
+  .mdx-content--spaced h5,
+  .mdx-content--spaced h6 { margin-top: 1.5rem; margin-bottom: 0.5rem; }
+  .mdx-content--spaced p { margin-bottom: 1rem; }
+  .mdx-content--spaced ul,
+  .mdx-content--spaced ol { margin-bottom: 1rem; }
+  .mdx-content--spaced blockquote { margin: 1.5rem 0; }
+  .mdx-content--spaced pre { margin: 1.5rem 0; }
+  
+  /* Selection styling */
+  .mdx-content ::selection {
+    background-color: var(--accent-main);
+    color: var(--text-on-brand);
+  }

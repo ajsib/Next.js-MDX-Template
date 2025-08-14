@@ -10,25 +10,19 @@ type Props = {
   currentPath: string[]
 }
 
+// Remove hard-coded width; let the parent control sizing.
 const sidebarCss = css`
-  position: sticky;
-  top: 4rem;
-  width: 300px;
+  display: block;
   border-radius: 8px;
   background: var(--surface-50);
-  border-left: 1px solid var(--border-light);
-  min-height: calc(100vh - 112px);
-  max-height: calc(100vh - 112px);
-  padding: 0 0.7rem;
-  font-size: 1.05rem;
-  font-family: var(--font-body, Inter, sans-serif);
-  overflow-y: auto;
+  font-size: clamp(0.98rem, 0.6vw + 0.9rem, 1.06rem);
+  font-family: var(--font-body, Inter, ui-sans-serif, system-ui);
 `
 
 const ulCss = (depth: number) => css`
   list-style: none;
   margin: 0;
-  padding: ${depth === 0 ? "1.2rem 0.7rem 1.2rem 0.7rem" : "0 0 0 1.10rem"};
+  padding: ${depth === 0 ? "1.1rem 0.7rem 1.1rem 0.7rem" : "0 0 0 1.0rem"};
 `
 
 const linkCss = (active: boolean) => css`
@@ -41,16 +35,12 @@ const linkCss = (active: boolean) => css`
   transition: background 0.13s;
   cursor: pointer;
   display: block;
-  &:hover {
-    color: var(--text-interactive);
-    background: var(--surface-hover);
-    text-decoration: underline;
-  }
+  &:hover { color: var(--text-interactive); background: var(--surface-hover); text-decoration: underline; }
 `
 
 const caretCss = (open: boolean) => css`
   font-size: 0.97em;
-  margin-right: 0.34em;
+  margin-left: 0.34em;
   color: var(--text-muted);
   user-select: none;
   transition: transform 0.13s;
@@ -58,12 +48,9 @@ const caretCss = (open: boolean) => css`
   cursor: pointer;
 `
 
-// Helper to filter out all index nodes
 function filterIndex(nodes: NavNode[] = []): NavNode[] {
   return nodes.filter(n => n.label !== "index").map(n =>
-    n.children
-      ? { ...n, children: filterIndex(n.children) }
-      : n
+    n.children ? { ...n, children: filterIndex(n.children) } : n
   )
 }
 
@@ -82,30 +69,25 @@ function DropdownNode({
 }) {
   const [open, setOpen] = useState(defaultOpen)
   const isActive = currentPath.join("/") === nodePath.join("/")
-  const hasChildren = node.children && node.children.length > 0
+  const hasChildren = !!(node.children && node.children.length > 0)
 
   return (
     <li css={css`margin-bottom: 0.17em;`}>
-<div css={css`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-`}>
-  <Link href={node.href} css={linkCss(isActive)}>
-    {node.label}
-  </Link>
-  {hasChildren && (
-    <span
-      onClick={() => setOpen(v => !v)}
-      tabIndex={0}
-      role="button"
-      css={caretCss(open)}
-      aria-label={open ? "Collapse" : "Expand"}
-      aria-expanded={open}
-    >▶</span>
-  )}
-</div>
+      <div css={css`display: flex; align-items: center; justify-content: space-between; width: 100%;`}>
+        <Link href={node.href} css={linkCss(isActive)}>
+          {node.label}
+        </Link>
+        {hasChildren && (
+          <span
+            onClick={() => setOpen(v => !v)}
+            tabIndex={0}
+            role="button"
+            css={caretCss(open)}
+            aria-label={open ? "Collapse" : "Expand"}
+            aria-expanded={open}
+          >▶</span>
+        )}
+      </div>
 
       {hasChildren && open && (
         <ul css={ulCss(depth + 1)}>
@@ -134,7 +116,6 @@ function DropdownNode({
 }
 
 function renderTree(nodes: NavNode[], currentPath: string[], depth = 0, parentPath: string[] = []) {
-  // First level: always expanded, no dropdowns, show children recursively
   if (depth === 0) {
     return (
       <ul css={ulCss(depth)}>
@@ -176,37 +157,29 @@ function renderTree(nodes: NavNode[], currentPath: string[], depth = 0, parentPa
 }
 
 export default function SidebarNav({ navTree, currentPath }: Props) {
-  // Remove all index nodes before rendering
   const cleanTree = useMemo(() => filterIndex(navTree), [navTree])
   return (
-    <aside css={sidebarCss}>
-<Link
-  href="/docs/"
-  css={css`
-    display: block;
-    font-family: var(--font-brand, Inter, sans-serif);
-    font-size: 1.5rem;
-    font-weight: 800;
-    letter-spacing: 0.01em;
-    color: var(--text-900);
-    text-decoration: none;
-    margin: 1.3rem 0 0rem 0.1rem;
-    padding: 0.14em 0.35em;
-    border-radius: 6px;
-    transition: background 0.13s;
-    &:hover,
-    &:focus {
-      color: var(--text-interactive);
-      background: var(--surface-hover);
-      text-decoration: underline;
-    }
-  `}
->
-  Docs
-</Link>
-
-
+    <nav css={sidebarCss} aria-label="Docs navigation">
+      <Link
+        href="/docs/"
+        css={css`
+          display: block;
+          font-family: var(--font-brand, Inter, ui-sans-serif);
+          font-size: 1.35rem;
+          font-weight: 800;
+          letter-spacing: 0.01em;
+          color: var(--text-900);
+          text-decoration: none;
+          margin: 1.0rem 0 0.2rem 0.1rem;
+          padding: 0.14em 0.35em;
+          border-radius: 6px;
+          transition: background 0.13s;
+          &:hover, &:focus { color: var(--text-interactive); background: var(--surface-hover); text-decoration: underline; }
+        `}
+      >
+        Docs
+      </Link>
       {renderTree(cleanTree, currentPath)}
-    </aside>
+    </nav>
   )
 }

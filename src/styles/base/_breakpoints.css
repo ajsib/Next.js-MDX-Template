@@ -1,0 +1,27 @@
+:root {
+    /* Breakpoint widths */
+    --bp-xs: 480px;
+    --bp-sm: 640px;
+    --bp-md: 768px;
+    --bp-lg: 1024px;
+    --bp-xl: 1280px;
+    --bp-2xl: 1536px;
+  
+    /* Layout tokens tied to breakpoints */
+    --header-h: 44px;
+    --sidebar-w: clamp(220px, 22vw, 300px);
+    --content-max: 1200px;
+    --gap: clamp(16px, 2.5vw, 32px);
+    --vpad: clamp(12px, 2vh, 24px);
+    --radius: 10px;
+  }
+  
+  /* Example usage */
+  @media (max-width: var(--bp-lg)) {
+    /* tablet and below */
+  }
+  
+  @media (max-width: var(--bp-md)) {
+    /* mobile and below */
+  }
+  

@@ -16,8 +16,8 @@ export default function MdxSlugLayout({ navTree, breadcrumbs, children }: Props)
 
       {/* Tiny mobile header only on small screens */}
       <header className="mobile-header" aria-label="Page header">
-        <div className="brand">Docs</div>
         <a className="menu-btn" href="#sidenav" aria-controls="sidenav" aria-label="Open navigation">☰</a>
+        <div className="brand">Docs</div>
       </header>
 
       <div className="container">
@@ -43,6 +43,7 @@ export default function MdxSlugLayout({ navTree, breadcrumbs, children }: Props)
           --content-max: 1200px;
           --gap: clamp(16px, 2.5vw, 32px);
           --vpad: clamp(12px, 2vh, 24px);
+          --mobile-gap: 8px;
           --radius: 10px;
         }
 
@@ -72,6 +73,7 @@ export default function MdxSlugLayout({ navTree, breadcrumbs, children }: Props)
           max-width: calc(var(--content-max) + var(--sidebar-w) + var(--gap));
           margin-inline: auto;
           padding: var(--vpad) var(--gap);
+          width: 100%;
         }
 
         /* ---------- Header (mobile only) ---------- */
@@ -101,23 +103,25 @@ export default function MdxSlugLayout({ navTree, breadcrumbs, children }: Props)
           flex: 0 0 var(--sidebar-w);
         }
         .sidebar-inner {
-            position: sticky;
-            top: var(--vpad);
-            height: calc(100svh - var(--vpad) * 2); /* bottom margin via container padding */
-            overflow-y: auto;                         /* scroll when content exceeds height */
-            background: var(--surface-50);
-            border: 1px solid var(--border-light);
-            border-radius: 8px;
-            padding: 0.5rem;
-            scrollbar-gutter: stable both-edges;      /* avoids layout shift when scrollbar appears */
+          position: sticky;
+          top: var(--vpad);
+          height: calc(100svh - var(--vpad) * 2); /* bottom margin via container padding */
+          overflow-y: auto;                         /* scroll when content exceeds height */
+          background: var(--surface-50);
+          border: 1px solid var(--border-light);
+          border-radius: 8px;
+          padding: 0.5rem;
+          scrollbar-gutter: stable both-edges;      /* avoids layout shift when scrollbar appears */
         }
         .close-btn { display: none; }
 
         /* ---------- Content ---------- */
         .content {
-          flex: 1 1 0;
-          max-width: var(--content-max);
-          margin: 0;
+          flex: 1 1 auto;      /* allow shrink/grow */
+          min-width: 0;        /* enable flex shrink without overflow */
+          width: 100%;         /* fluid width */
+          max-width: var(--content-max); /* cap at desktop */
+          margin: 0;           /* no extra outer margin on desktop */
           background: var(--surface-0);
           box-shadow: var(--shadow-sm);
           border: 1px solid var(--border-light);
@@ -130,7 +134,10 @@ export default function MdxSlugLayout({ navTree, breadcrumbs, children }: Props)
 
         /* ---------- Responsive: ≤ 1024px ---------- */
         @media (max-width: 1024px) {
-          .container { display: block; padding: 0; }
+          .container {
+            display: block;
+            padding: 0; /* remove side padding so content uses full width */
+          }
 
           .mobile-header {
             position: sticky;
@@ -140,7 +147,7 @@ export default function MdxSlugLayout({ navTree, breadcrumbs, children }: Props)
             height: var(--header-h);
             align-items: center;
             justify-content: space-between;
-            padding: 0 10px;
+            padding: 0 var(--mobile-gap);
             background: var(--surface-0);
             border-bottom: 1px solid var(--border-light);
           }
@@ -168,7 +175,15 @@ export default function MdxSlugLayout({ navTree, breadcrumbs, children }: Props)
 
           .close-btn { display: inline-flex; position: absolute; top: 8px; right: 8px; z-index: 71; }
 
-          .content { margin: var(--vpad) var(--gap); }
+          .content {
+            margin: 0;                 /* edge-to-edge container */
+            border-radius: 0;          /* remove rounding to maximize space */
+            border-left: 0;            /* no left/right borders to reclaim px */
+            border-right: 0;
+            max-width: none;           /* allow full viewport width */
+            padding: clamp(12px, 3.5vw, 20px); /* small inner padding for readability */
+            box-shadow: none;          /* minimal chrome on mobile */
+          }
         }
 
         /* Reduced motion */
